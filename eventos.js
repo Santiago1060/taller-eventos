@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
   console.log("eventos.js conectado");
 
-  const div = document.getElementById("contenedor");
+const boton = document.getElementById("btn-saludar");
+boton.addEventListener("click", function(event) {
+  alert("Hola!");
+  event.stopPropagation();
+});
 
-  div.addEventListener("click", function() {
-    alert("Hola! Soy el div");
-  });
 });
